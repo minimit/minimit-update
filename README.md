@@ -3,6 +3,10 @@ minimit-update
 
 Fullscreen overlay on deactivated javascript or obsolete browser
 
+See my website [minimit.com](http://www.minimit.com)
+
+Follow me on [twitter](http://twitter.com/beaver82minimit)
+
 Description
 -------
 Simple plugin to have a fullscreen browser and javascript detection.
@@ -33,4 +37,4 @@ License
 -------
 Licensed under MIT licenses.
 
-© 2013 [Minimit](http://www.minimit.com)
+© 2013 Minimit
