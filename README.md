@@ -3,7 +3,7 @@ minimit-update
 
 Fullscreen overlay on deactivated javascript or obsolete browser
 
-My website [minimit.com](http://www.minimit.com) and follow me on [twitter](http://twitter.com/beaver82minimit)
+My website [minimit.com](http://www.minimit.com) and my [twitter](http://twitter.com/beaver82minimit)
 
 Description
 -------
