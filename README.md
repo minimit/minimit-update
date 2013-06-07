@@ -17,4 +17,5 @@ Usage
 License
 -------
 Licensed under MIT licenses.
+
 © 2013 [Minimit](http://www.minimit.com)
