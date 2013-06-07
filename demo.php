@@ -12,7 +12,7 @@
 	$muTextColor = "#484848";
 	$muInnerColor = "#ffffff";
 	$muOuterColor = "#e5e7e9";
-    include("mu.php"); //realpath(dirname(__FILE__)) . 
+    include("minimit-update.php");
 ?>
 
 <br><br><br><br><br><br>
