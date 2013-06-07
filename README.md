@@ -13,6 +13,21 @@ It has a fixed design where you can change the logo and the colors from the sett
 Usage
 -------
 
+``` php
+/* general */
+$muLang = "en"; // en it es fr de
+/* required browser version */
+$muIeVersion = 8;
+$muFfVersion = 3.6;
+$muSafVersion = 4;
+$muOprVersion = 11;
+/* graphic settings */
+$muImage = "logo.png";
+$muTextColor = "#484848";
+$muInnerColor = "#ffffff";
+$muOuterColor = "#e5e7e9";
+include("minimit-update.php");
+```
 
 License
 -------
