@@ -32,6 +32,5 @@ include("minimit-update.php");
 
 License
 -------
-Licensed under MIT licenses.
+© 2013 Minimit. Licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php).
 
-© 2013 Minimit
