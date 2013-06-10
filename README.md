@@ -5,7 +5,7 @@ My website [minimit.com](http://www.minimit.com) and my [twitter](http://twitter
 
 Description
 -------
-Simple plugin to have a fullscreen browser and javascript detection.
+**Simple plugin to have a fullscreen browser and javascript detection.**
 
 Just put the php settings and the php include as shown in the source code, you can set the language and the browser's versions you want to check.
 
