@@ -1,4 +1,4 @@
-# [minimit-update](http://www.minimit.com/projects/code/minimit-update)
+# [minimit-update](http://www.minimit.com/projects/code/minimit-update-plugin)
 #### Fullscreen overlay on deactivated javascript or obsolete browser
 
 My website [minimit.com](http://www.minimit.com) and my [twitter](http://twitter.com/beaver82minimit)
