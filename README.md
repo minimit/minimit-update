@@ -11,9 +11,6 @@ Just put the php settings and the php include as shown in the source code, you c
 
 It has a fixed design where you can change the logo and the colors from the settings. The warning text is translated to English, Spagnish, German, French and Italian.
 
-#### Browser support
-IE6+, Firefox 3.5+, Safari 3+, Opera 9+, Chrome, Iphone, Ipad, Android, Windows Phone.
-
 Usage
 -------
 
