@@ -8,10 +8,6 @@ It has a fixed design where you can change the logo and the colors from the sett
 
 My website [minimit.com](http://www.minimit.com) and my [twitter](http://twitter.com/beaver82minimit).
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c3aad3ee5b26aa668944eee110c174fc1d6ec78c
 Usage
 -------
 
@@ -31,10 +27,6 @@ $muOuterColor = "#e5e7e9";
 include("minimit-update.php");
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c3aad3ee5b26aa668944eee110c174fc1d6ec78c
 Acknowledgements
 -------
 Copyright © 2013 Riccardo Caroli. Licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php).
