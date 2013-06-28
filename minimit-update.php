@@ -1,5 +1,11 @@
 
 <script type="text/javascript">
+/*
+ * minimit-update 2.02
+ * http://github.com/minimit/minimit-update
+ * Copyright (C) 2013 by Riccardo Caroli http://www.minimit.com
+ * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
+ */
 // fix for ie8-
 if(!window.getComputedStyle){
     window.getComputedStyle = function(el, pseudo){
