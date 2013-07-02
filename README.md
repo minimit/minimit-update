@@ -1,4 +1,4 @@
-# [minimit-update](http://www.minimit.com/projects/code/minimit-update-plugin)
+# minimit-update
 
 **Simple plugin to have a fullscreen browser and javascript detection.**
 
