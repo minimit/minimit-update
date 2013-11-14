@@ -12,7 +12,7 @@ $muImage = "logo.png";
 $muTextColor = "#484848";
 $muInnerColor = "#ffffff";
 $muOuterColor = "#e5e7e9";
-include("minimit-update.php");
+include(realpath(dirname(__FILE__)) . "/minimit-update.php");
 ?>
 
 <br><br><br><br><br><br>

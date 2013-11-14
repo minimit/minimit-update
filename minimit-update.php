@@ -1,32 +1,35 @@
+<?php
+	/*
+	 * minimit-update 2.03
+	 * http://github.com/minimit/minimit-update
+	 * Copyright (C) 2013 by Riccardo Caroli http://www.minimit.com
+	 * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
+	 */
+	if($muLang != "en" && $muLang != "es" && $muLang != "de" && $muLang != "fr" && $muLang != "it"){$muLang = "en";}
+?>
 
 <script type="text/javascript">
-/*
- * minimit-update 2.02
- * http://github.com/minimit/minimit-update
- * Copyright (C) 2013 by Riccardo Caroli http://www.minimit.com
- * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
- */
-// fix for ie8-
-if(!window.getComputedStyle){
-    window.getComputedStyle = function(el, pseudo){
-        this.el = el;
-        this.getPropertyValue = function(prop){
-            var re = /(\-([a-z]){1})/g;
-            if(prop == 'float') prop = 'styleFloat';
-            if(re.test(prop)) {
-                prop = prop.replace(re, function(){
-                    return arguments[2].toUpperCase();
-                });
-            }
-            return el.currentStyle[prop] ? el.currentStyle[prop] : null;
-        }
-        return this;
-    }
-}
-//
-var style = window.getComputedStyle(document.documentElement);
-var oldOverflowX = style.getPropertyValue('overflow-x');
-var oldOverflowY = style.getPropertyValue('overflow-y');
+	// fix for ie8-
+	if(!window.getComputedStyle){
+	    window.getComputedStyle = function(el, pseudo){
+	        this.el = el;
+	        this.getPropertyValue = function(prop){
+	            var re = /(\-([a-z]){1})/g;
+	            if(prop == 'float') prop = 'styleFloat';
+	            if(re.test(prop)) {
+	                prop = prop.replace(re, function(){
+	                    return arguments[2].toUpperCase();
+	                });
+	            }
+	            return el.currentStyle[prop] ? el.currentStyle[prop] : null;
+	        }
+	        return this;
+	    }
+	}
+	// computed style
+	var style = window.getComputedStyle(document.documentElement);
+	var oldOverflowX = style.getPropertyValue('overflow-x');
+	var oldOverflowY = style.getPropertyValue('overflow-y');
 </script>
 
 <div id="mu">
@@ -67,41 +70,41 @@ var oldOverflowY = style.getPropertyValue('overflow-y');
 	</div>
 	<div id="javascript-mu-warning">
 		<!--[if gte IE 7]><!--><?php if($muImage){echo '<img src="'.$muImage.'" alt="logo" />';} ?><!--<![endif]-->
-		<div class="mu-warning mu-warning-en">This website need Javascript activated for a correct browsing<br/><a href="http://support.google.com/bin/answer.py?hl=en&amp;answer=23852" target="_blank">Please follow this instructions to activate Javascript</a></div>
-		<div class="mu-warning mu-warning-es">Esta p&aacute;gina web necesita tener Javascript activado para una navegaci&oacute;n correcta<br/><a href="http://support.google.com/bin/answer.py?hl=es&amp;answer=23852" target="_blank">Por favor, siga estas instrucciones para activar Javascript</a></div>
-		<div class="mu-warning mu-warning-de">Diese Website ben&ouml;tigt Javascript f&uuml;r eine korrekte Suche<br/><a href="http://support.google.com/bin/answer.py?hl=de&amp;answer=23852" target="_blank">Bitte folgen Sie diesen Anweisungen, um Javascript zu aktivieren</a></div>
-		<div class="mu-warning mu-warning-fr">Javascript doit &ecirc;tre activ&eacute; sur votre navigateur pour une visualisation correcte de ce site<br/><a href="http://support.google.com/bin/answer.py?hl=fr&amp;answer=23852" target="_blank">Veuillez suivre ces instructions pour activer Javascript</a></div>
-		<div class="mu-warning mu-warning-it">Questo sito richiede Javascript abilitato per un corretto funzionamento<br/><a href="http://support.google.com/bin/answer.py?hl=it&amp;answer=23852" target="_blank">Per favore segui queste istruzioni per abilitare Javascript</a></div>
+		<div class="mu-warning mu-warning-en">This website need Javascript activated for a correct browsing<br/><a href="http://support.google.com/answer/23852?hl=en" target="_blank">Please follow this instructions to activate Javascript</a></div>
+		<div class="mu-warning mu-warning-es">Esta p&aacute;gina web necesita tener Javascript activado para una navegaci&oacute;n correcta<br/><a href="http://support.google.com/answer/23852?hl=es" target="_blank">Por favor, siga estas instrucciones para activar Javascript</a></div>
+		<div class="mu-warning mu-warning-de">Diese Website ben&ouml;tigt Javascript f&uuml;r eine korrekte Suche<br/><a href="http://support.google.com/answer/23852?hl=de" target="_blank">Bitte folgen Sie diesen Anweisungen, um Javascript zu aktivieren</a></div>
+		<div class="mu-warning mu-warning-fr">Javascript doit &ecirc;tre activ&eacute; sur votre navigateur pour une visualisation correcte de ce site<br/><a href="http://support.google.com/answer/23852?hl=fr" target="_blank">Veuillez suivre ces instructions pour activer Javascript</a></div>
+		<div class="mu-warning mu-warning-it">Questo sito richiede Javascript abilitato per un corretto funzionamento<br/><a href="http://support.google.com/answer/23852?hl=it" target="_blank">Per favore segui queste istruzioni per abilitare Javascript</a></div>
 	</div>
 	<div id="browser-mu-warning">
 		<!--[if gte IE 7]><!--><?php if($muImage){echo '<img src="'.$muImage.'" alt="logo" />';} ?><!--<![endif]-->
-		<div class="mu-warning mu-warning-en">You are using an outdated browser not supported by this website<br/><a href="http://browser-update.org/en/update.html" target="_blank">Upgrade your browser, we recomend the latest version of Chrome</a></div>
-		<div class="mu-warning mu-warning-es">Usted est&aacute; utilizando un navegador obsoleto que esta p&aacute;gina web no admite<br/><a href="http://browser-update.org/es/update.html" target="_blank">Actualice su navegador, le recomendamos la &uacute;ltima versi&oacute;n de Chrome</a></div>
-		<div class="mu-warning mu-warning-de">Sie verwenden einen veralteten Browser, der nicht von dieser Website unterst&uuml;tzt wird<br/><a href="http://browser-update.org/de/update.html" target="_blank">Aktualisieren Sie Ihren Browser, wir empfehlen die neueste Version von Chrome</a></div>
-		<div class="mu-warning mu-warning-fr">Vous utilisez une version de navigateur obsol&egrave;te qui n'est pas compatible avec ce site web<br/><a href="http://browser-update.org/fr/update.html" target="_blank">Veuillez mettre &agrave; niveau votre navigateur, nous vous recommandons Chrome</a></div>
-		<div class="mu-warning mu-warning-it">Stai utilizzando un browser obsoleto non supportato da questo sito<br/><a href="http://browser-update.org/it/update.html" target="_blank">Aggiorna il tuo browser, raccomandiamo l'ultima versione di Chrome</a></div>
+		<div class="mu-warning mu-warning-en">You are using an outdated browser not supported by this website<br/><a href="http://browsehappy.com/" target="_blank">Upgrade your browser, we recomend the latest version of Chrome</a></div>
+		<div class="mu-warning mu-warning-es">Usted est&aacute; utilizando un navegador obsoleto que esta p&aacute;gina web no admite<br/><a href="http://browsehappy.com/" target="_blank">Actualice su navegador, le recomendamos la &uacute;ltima versi&oacute;n de Chrome</a></div>
+		<div class="mu-warning mu-warning-de">Sie verwenden einen veralteten Browser, der nicht von dieser Website unterst&uuml;tzt wird<br/><a href="http://browsehappy.com/" target="_blank">Aktualisieren Sie Ihren Browser, wir empfehlen die neueste Version von Chrome</a></div>
+		<div class="mu-warning mu-warning-fr">Vous utilisez une version de navigateur obsol&egrave;te qui n'est pas compatible avec ce site web<br/><a href="http://browsehappy.com/" target="_blank">Veuillez mettre &agrave; niveau votre navigateur, nous vous recommandons Chrome</a></div>
+		<div class="mu-warning mu-warning-it">Stai utilizzando un browser obsoleto non supportato da questo sito<br/><a href="http://browsehappy.com/" target="_blank">Aggiorna il tuo browser, raccomandiamo l'ultima versione di Chrome</a></div>
 	</div>
 </div>
 
 <script type="text/javascript">
-var oldbrowser = false;
-var ua = navigator.userAgent;
-var muIeVersion = <?php echo $muIeVersion; ?>;
-var muFfVersion = <?php echo $muFfVersion; ?>;
-var muSafVersion = <?php echo $muSafVersion; ?>;
-var muOprVersion = <?php echo $muOprVersion; ?>;
-if(/bot|googlebot|slurp|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)){
-}else if(/MSIE.(\d+\.\d+)/i.test(ua)){var ieversion = new Number(RegExp.$1);if(ieversion < muIeVersion){oldbrowser = true;}
-}else if(/Firefox.(\d+\.\d+)/i.test(ua)){var ffversion = new Number(RegExp.$1);if(ffversion < muFfVersion){oldbrowser = true;}
-}else if(/Safari.(\d+)/i.test(ua)){var vreg = /Version[\/\s](\d+\.\d+)/.test(ua);var safversion = new Number(RegExp.$1);if(safversion < muSafVersion){oldbrowser = true;}
-}else if(/Opera.(\d+\.?\d+)/i.test(ua)){var vreg = /Version[\/\s](\d+\.\d+)/.test(ua);var oprversion = new Number(RegExp.$1);if(oprversion < muOprVersion){oldbrowser = true;}}
-if(oldbrowser){
-	document.getElementById('javascript-mu-warning').style.display = 'none';
-	document.getElementById('browser-mu-warning').style.display = 'block';
-}else{
-	document.getElementById('mu').style.display = 'none';
-	document.documentElement.style.overflowX = oldOverflowX;
-	document.documentElement.style.overflowY = oldOverflowY;
-	document.getElementsByTagName('body')[0].style.overflow = 'visible';
-}
+	var oldbrowser = false;
+	var ua = navigator.userAgent;
+	var muIeVersion = <?php echo $muIeVersion; ?>;
+	var muFfVersion = <?php echo $muFfVersion; ?>;
+	var muSafVersion = <?php echo $muSafVersion; ?>;
+	var muOprVersion = <?php echo $muOprVersion; ?>;
+	if(/bot|googlebot|slurp|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)){
+	}else if(/MSIE.(\d+\.\d+)/i.test(ua)){var ieversion = new Number(RegExp.$1);if(ieversion < muIeVersion){oldbrowser = true;}
+	}else if(/Firefox.(\d+\.\d+)/i.test(ua)){var ffversion = new Number(RegExp.$1);if(ffversion < muFfVersion){oldbrowser = true;}
+	}else if(/Safari.(\d+)/i.test(ua)){var vreg = /Version[\/\s](\d+\.\d+)/.test(ua);var safversion = new Number(RegExp.$1);if(safversion < muSafVersion){oldbrowser = true;}
+	}else if(/Opera.(\d+\.?\d+)/i.test(ua)){var vreg = /Version[\/\s](\d+\.\d+)/.test(ua);var oprversion = new Number(RegExp.$1);if(oprversion < muOprVersion){oldbrowser = true;}}
+	if(oldbrowser){
+		document.getElementById('javascript-mu-warning').style.display = 'none';
+		document.getElementById('browser-mu-warning').style.display = 'block';
+	}else{
+		document.getElementById('mu').style.display = 'none';
+		document.documentElement.style.overflowX = oldOverflowX;
+		document.documentElement.style.overflowY = oldOverflowY;
+		document.getElementsByTagName('body')[0].style.overflow = 'visible';
+	}
 </script>
