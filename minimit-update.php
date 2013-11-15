@@ -1,11 +1,27 @@
 <?php
 	/*
-	 * minimit-update 2.03
+	 * minimit-update 2.0.4
 	 * http://github.com/minimit/minimit-update
 	 * Copyright (C) 2013 by Riccardo Caroli http://www.minimit.com
 	 * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
 	 */
-	if($muLang != "en" && $muLang != "es" && $muLang != "de" && $muLang != "fr" && $muLang != "it"){$muLang = "en";}
+	if($muLang == "es"){
+		$mu_javascript_warning = 'Esta p&aacute;gina web necesita tener Javascript activado para una navegaci&oacute;n correcta<br/><a href="http://support.google.com/answer/23852?hl=es" target="_blank">Por favor, siga estas instrucciones para activar Javascript</a>';
+		$mu_browser_warning = 'Usted est&aacute; utilizando un navegador obsoleto que esta p&aacute;gina web no admite<br/><a href="http://browsehappy.com/" target="_blank">Actualice su navegador, le recomendamos la &uacute;ltima versi&oacute;n de Chrome</a>';
+	}else if($muLang == "de"){
+		$mu_javascript_warning = 'Diese Website ben&ouml;tigt Javascript f&uuml;r eine korrekte Suche<br/><a href="http://support.google.com/answer/23852?hl=de" target="_blank">Bitte folgen Sie diesen Anweisungen, um Javascript zu aktivieren</a>';
+		$mu_browser_warning = 'Sie verwenden einen veralteten Browser, der nicht von dieser Website unterst&uuml;tzt wird<br/><a href="http://browsehappy.com/" target="_blank">Aktualisieren Sie Ihren Browser, wir empfehlen die neueste Version von Chrome</a>';
+	}else if($muLang == "fr"){
+		$mu_javascript_warning = 'Javascript doit &ecirc;tre activ&eacute; sur votre navigateur pour une visualisation correcte de ce site<br/><a href="http://support.google.com/answer/23852?hl=fr" target="_blank">Veuillez suivre ces instructions pour activer Javascript</a>';
+		$mu_browser_warning = 'Vous utilisez une version de navigateur obsol&egrave;te qui n\'est pas compatible avec ce site web<br/><a href="http://browsehappy.com/" target="_blank">Veuillez mettre &agrave; niveau votre navigateur, nous vous recommandons Chrome</a>';
+	}else if($muLang == "it"){
+		$mu_javascript_warning = 'Questo sito richiede Javascript abilitato per un corretto funzionamento<br/><a href="http://support.google.com/answer/23852?hl=it" target="_blank">Per favore segui queste istruzioni per abilitare Javascript</a>';
+		$mu_browser_warning = 'Stai utilizzando un browser obsoleto non supportato da questo sito<br/><a href="http://browsehappy.com/" target="_blank">Aggiorna il tuo browser, raccomandiamo l\'ultima versione di Chrome</a>';
+	}else{
+		$muLang = "en";
+		$mu_javascript_warning = 'This website need Javascript activated for a correct browsing<br/><a href="http://support.google.com/answer/23852?hl=en" target="_blank">Please follow this instructions to activate Javascript</a>';
+		$mu_browser_warning = 'You are using an outdated browser not supported by this website<br/><a href="http://browsehappy.com/" target="_blank">Upgrade your browser, we recomend the latest version of Chrome</a>';
+	}
 ?>
 
 <script type="text/javascript">
@@ -39,18 +55,15 @@
 	#mu img {margin-top:-30px;margin-bottom:30px;}
 	#mu a:link, #mu a:visited {text-decoration:none;font-weight:bold;outline:none;}
 	#mu a:hover, #mu a:active{outline: none;}
-	#mu .mu-warning {display:none;}
 	#browser-mu-warning, #javascript-mu-warning {padding-top:150px;text-align:center;position:absolute;width:640px;height:300px;top:50%;left:50%;margin:-200px 0 0 -320px;}
 	#browser-mu-warning {display:none;}
 	#mu-shade {display:block;position:absolute;z-index:-99;overflow:hidden;width:100%;height:100%;z-index:-1;}
 	#mu-shade-inside {width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100, finishopacity=0, style=2);}
 	/* settings */
-	#mu .mu-warning-<?php echo $muLang; ?> {display:block;}
 	#mu {color:<?php echo $muTextColor; ?>;}
 	#mu a:link, #mu a:visited {color:<?php echo $muTextColor; ?>;border-bottom:1px solid <?php echo $muTextColor; ?>;}
 	#mu a:hover, #mu a:active{border-bottom:2px solid <?php echo $muTextColor; ?>;}
-	#mu-shade {background:<?php echo $muOuterColor; ?>;
-	}
+	#mu-shade {background:<?php echo $muOuterColor; ?>;}
 	#mu-shade-inside {
 		background:<?php echo $muInnerColor; ?>;
 		background:-webkit-radial-gradient(50% 50%, circle, <?php echo $muInnerColor; ?>, <?php echo $muOuterColor; ?>);
@@ -70,19 +83,11 @@
 	</div>
 	<div id="javascript-mu-warning">
 		<!--[if gte IE 7]><!--><?php if($muImage){echo '<img src="'.$muImage.'" alt="logo" />';} ?><!--<![endif]-->
-		<div class="mu-warning mu-warning-en">This website need Javascript activated for a correct browsing<br/><a href="http://support.google.com/answer/23852?hl=en" target="_blank">Please follow this instructions to activate Javascript</a></div>
-		<div class="mu-warning mu-warning-es">Esta p&aacute;gina web necesita tener Javascript activado para una navegaci&oacute;n correcta<br/><a href="http://support.google.com/answer/23852?hl=es" target="_blank">Por favor, siga estas instrucciones para activar Javascript</a></div>
-		<div class="mu-warning mu-warning-de">Diese Website ben&ouml;tigt Javascript f&uuml;r eine korrekte Suche<br/><a href="http://support.google.com/answer/23852?hl=de" target="_blank">Bitte folgen Sie diesen Anweisungen, um Javascript zu aktivieren</a></div>
-		<div class="mu-warning mu-warning-fr">Javascript doit &ecirc;tre activ&eacute; sur votre navigateur pour une visualisation correcte de ce site<br/><a href="http://support.google.com/answer/23852?hl=fr" target="_blank">Veuillez suivre ces instructions pour activer Javascript</a></div>
-		<div class="mu-warning mu-warning-it">Questo sito richiede Javascript abilitato per un corretto funzionamento<br/><a href="http://support.google.com/answer/23852?hl=it" target="_blank">Per favore segui queste istruzioni per abilitare Javascript</a></div>
+		<div class="mu-warning"><?php echo $mu_javascript_warning; ?></div>
 	</div>
 	<div id="browser-mu-warning">
 		<!--[if gte IE 7]><!--><?php if($muImage){echo '<img src="'.$muImage.'" alt="logo" />';} ?><!--<![endif]-->
-		<div class="mu-warning mu-warning-en">You are using an outdated browser not supported by this website<br/><a href="http://browsehappy.com/" target="_blank">Upgrade your browser, we recomend the latest version of Chrome</a></div>
-		<div class="mu-warning mu-warning-es">Usted est&aacute; utilizando un navegador obsoleto que esta p&aacute;gina web no admite<br/><a href="http://browsehappy.com/" target="_blank">Actualice su navegador, le recomendamos la &uacute;ltima versi&oacute;n de Chrome</a></div>
-		<div class="mu-warning mu-warning-de">Sie verwenden einen veralteten Browser, der nicht von dieser Website unterst&uuml;tzt wird<br/><a href="http://browsehappy.com/" target="_blank">Aktualisieren Sie Ihren Browser, wir empfehlen die neueste Version von Chrome</a></div>
-		<div class="mu-warning mu-warning-fr">Vous utilisez une version de navigateur obsol&egrave;te qui n'est pas compatible avec ce site web<br/><a href="http://browsehappy.com/" target="_blank">Veuillez mettre &agrave; niveau votre navigateur, nous vous recommandons Chrome</a></div>
-		<div class="mu-warning mu-warning-it">Stai utilizzando un browser obsoleto non supportato da questo sito<br/><a href="http://browsehappy.com/" target="_blank">Aggiorna il tuo browser, raccomandiamo l'ultima versione di Chrome</a></div>
+		<div class="mu-warning"><?php echo $mu_browser_warning; ?></div>
 	</div>
 </div>
 
