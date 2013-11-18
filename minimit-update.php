@@ -1,6 +1,6 @@
 <?php
 	/*
-	 * minimit-update 2.0.4
+	 * minimit-update 2.1.0
 	 * http://github.com/minimit/minimit-update
 	 * Copyright (C) 2013 by Riccardo Caroli http://www.minimit.com
 	 * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
@@ -49,6 +49,7 @@
 </script>
 
 <div id="mu">
+
 	<style scoped>
 	body{height:100%;overflow:hidden;}
 	#mu {z-index:999999;display:block;position:fixed;width:100% !important;height:100% !important;left:0;top:0;margin:0;z-index:9999;font-family:sans-serif;font-size: 14px;line-height: 26px;}
@@ -76,7 +77,10 @@
 		background:<?php echo $muInnerColor; ?>;
 		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100, finishopacity=0, style=2);
 	}
+	#javascript-mu-warning {display:none;}
 	</style>
+	<noscript><style scoped> #javascript-mu-warning {display:block;}</style></noscript>
+
 	<!--[if lte IE 9]> <div id="mu-shade" class="lte-ie9"> <![endif]-->
 	<!--[if gte IE 10]><!--> <div id="mu-shade"> <!--<![endif]-->
 		<div id="mu-shade-inside"></div>
@@ -89,6 +93,7 @@
 		<!--[if gte IE 7]><!--><?php if($muImage){echo '<img src="'.$muImage.'" alt="logo" />';} ?><!--<![endif]-->
 		<div class="mu-warning"><?php echo $mu_browser_warning; ?></div>
 	</div>
+
 </div>
 
 <script type="text/javascript">
@@ -104,7 +109,6 @@
 	}else if(/Safari.(\d+)/i.test(ua)){var vreg = /Version[\/\s](\d+\.\d+)/.test(ua);var safversion = new Number(RegExp.$1);if(safversion < muSafVersion){oldbrowser = true;}
 	}else if(/Opera.(\d+\.?\d+)/i.test(ua)){var vreg = /Version[\/\s](\d+\.\d+)/.test(ua);var oprversion = new Number(RegExp.$1);if(oprversion < muOprVersion){oldbrowser = true;}}
 	if(oldbrowser){
-		document.getElementById('javascript-mu-warning').style.display = 'none';
 		document.getElementById('browser-mu-warning').style.display = 'block';
 	}else{
 		document.getElementById('mu').style.display = 'none';

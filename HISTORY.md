@@ -1,4 +1,9 @@
 
+v2.1
+---------------------
+
+	* Fixed bug that show briefly the javascript check on slow connections or mobile devices
+
 v2.0.4
 ---------------------
 
