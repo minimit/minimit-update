@@ -1,6 +1,6 @@
 <?php
 	/*
-	 * minimit-update 2.1.0
+	 * minimit-update 2.1.1
 	 * http://github.com/minimit/minimit-update
 	 * Copyright (C) 2013 by Riccardo Caroli http://www.minimit.com
 	 * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
@@ -51,7 +51,7 @@
 <div id="mu">
 
 	<style scoped>
-	body{height:100%;overflow:hidden;}
+	html, body{height:100%;overflow:hidden;}
 	#mu {z-index:999999;display:block;position:fixed;width:100% !important;height:100% !important;left:0;top:0;margin:0;z-index:9999;font-family:sans-serif;font-size: 14px;line-height: 26px;}
 	#mu img {margin-top:-30px;margin-bottom:30px;}
 	#mu a:link, #mu a:visited {text-decoration:none;font-weight:bold;outline:none;}

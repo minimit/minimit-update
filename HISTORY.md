@@ -1,4 +1,9 @@
 
+v2.1.1
+---------------------
+
+	* Fixed scroll overflow on ie7 and lower
+
 v2.1
 ---------------------
 
