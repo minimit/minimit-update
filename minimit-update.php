@@ -1,9 +1,10 @@
 <?php
-	/*
-	 * minimit-update 2.1.1
-	 * http://github.com/minimit/minimit-update
-	 * Copyright (C) 2013 by Riccardo Caroli http://www.minimit.com
-	 * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
+	 /**
+	 * @copyright Copyright (C) 2013-2014 by Riccardo Caroli
+	 * @version    Minimit Update 2.1.1
+	 * @link       http://github.com/minimit/minimit-update
+	 * @author     Riccardo Caroli http://www.minimit.com
+	 * @license    Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
 	 */
 	if($muLang == "es"){
 		$mu_javascript_warning = 'Esta p&aacute;gina web necesita tener Javascript activado para una navegaci&oacute;n correcta<br/><a href="http://support.google.com/answer/23852?hl=es" target="_blank">Por favor, siga estas instrucciones para activar Javascript</a>';
