@@ -1,6 +1,6 @@
 # Minimit Update
 
-**Simple plugin to have a fullscreen browser and javascript detection.**
+**Simple plugin to have a fullscreen browser and javascript detection**
 
 Just put the php settings and the php include as shown in the source code, you can set the language and the browser's versions you want to check.
 
