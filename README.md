@@ -1,3 +1,5 @@
+# ----- NO LONGER MANTAINED -----
+
 # Minimit Update
 
 **Simple plugin to have a fullscreen browser and javascript detection**
